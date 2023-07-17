@@ -14,8 +14,9 @@ function clear() {
 // show up as performance regressions.
 function is_it_prime() {
     const n = document.getElementById("num").value;
-    if (n == 1) {
-        return print(n, false);
+    if (n == -1 || n == 0 || n == 1) {
+        // return print(n, false);
+        throw new Error('Whoops, this is a domain-specific bug!');
     }
 
     let factors = 0;
